@@ -35,7 +35,8 @@ func main() {
 		fmt.Println("Erro ao fazer a solicitação:", err)
 		return
 	}
-	defer resp.Body.Close()
+
+	resp.Body.Close()
 
 	fmt.Println("Status da resposta:", resp.Status)
 }
